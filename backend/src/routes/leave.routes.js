@@ -7,13 +7,15 @@ const {
 } = require("../controllers/leave.controller");
 const { authenticateToken } = require("../middleware/authMiddleware");
 const { requireRole } = require("../middleware/roleMiddleware");
+const { validate } = require("../middleware/validateMiddleware");
+const { leaveRequestSchema } = require("../validators/leave.validator");
 
 const router = express.Router();
 
 router.use(authenticateToken);
 
 // Employee actions
-router.post("/", applyLeave);
+router.post("/", validate(leaveRequestSchema), applyLeave);
 router.get("/me", getMyLeaves);
 
 // HR actions
