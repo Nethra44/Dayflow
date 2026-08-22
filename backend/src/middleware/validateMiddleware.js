@@ -1,5 +1,6 @@
 const validate = (schema) => {
   return (req, res, next) => {
+    if (!schema) return next();
     const { error } = schema.validate(req.body, { abortEarly: false });
     if (error) {
       const errorMessage = error.details
@@ -12,3 +13,4 @@ const validate = (schema) => {
 };
 
 module.exports = { validate };
+ 
