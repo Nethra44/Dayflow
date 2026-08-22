@@ -1,0 +1,106 @@
+.dayflow-login {
+  display: grid;
+  grid-template-columns: 56% 44%;
+  min-height: 100vh;
+}
+
+.login-visual {
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+  color: #fff;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+}
+
+.visual-content h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin: 1.5rem 0;
+}
+
+.visual-content h1 span {
+  color: #818cf8;
+}
+
+.login-section {
+  display: grid;
+  place-items: center;
+  background: #fff;
+  padding: 2rem;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 380px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0 12px;
+}
+
+.input-wrapper input {
+  border: none;
+  width: 100%;
+  padding: 12px 8px;
+  outline: none;
+}
+
+.password-toggle {
+  background: none;
+  border: none;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.login-submit {
+  width: 100%;
+  padding: 12px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.google-login {
+  width: 100%;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .dayflow-login {
+    grid-template-columns: 1fr;
+  }
+  .login-visual {
+    display: none;
+  }
+}
